@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        input(type='hidden' id='api' value=result)
+        script.
+            var result = document.querySelector("#api").value;
+
+            if (result == 0) {
+                alert("카카오톡 아이디로 로그인 되셨습니다.");
+                opener.location.reload();
+                self.close();
+            } else {
+                alert("카카오 로그인 실패 !!");
+            }
